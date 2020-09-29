@@ -33,3 +33,31 @@ a REST API and UI for SQL Server Agent Jobs with Express and React
   | /api/schedules/details | returns all schedule data with related job data(by job_id) from sysjobschedules and sysjob table |
   | /api/history | returns all history data from sysjobhistory table |
   | /api/servers | returns all server data from sysjobservers table |
+  
+  ## License
+  This is an open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+  
+  ## Dependencies
+  
+   ### WebUI
+   * [React](https://github.com/facebook/react)
+   * [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+   * [react-router](https://github.com/ReactTraining/react-router)
+   * [react-icons](https://github.com/react-icons/react-icons)
+   * [bootswatch](https://github.com/thomaspark/bootswatch)
+   * [FullCalender](https://github.com/fullcalendar/fullcalendar)
+   * [nivo](https://github.com/plouc/nivo)
+   * [Moment.js](https://github.com/moment/moment)
+   * [react-moment](https://github.com/headzoo/react-moment)
+   * [css-loaders](https://github.com/lukehaas/css-loaders)
+   
+   ### WebAPI
+   * [Express](https://github.com/expressjs/express)
+   * [helmet](https://github.com/helmetjs/helmet)
+   * [node-mssql](https://github.com/tediousjs/node-mssql)
+   * [nodemon](https://github.com/remy/nodemon/)
+   * [dotenv](https://github.com/motdotla/dotenv)
+   
+   ### General
+   * [Lodash](https://github.com/lodash/lodash)
+   
