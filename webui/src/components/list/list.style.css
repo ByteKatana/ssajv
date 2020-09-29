@@ -1,0 +1,7 @@
+.subItem{
+    cursor: initial;
+    transition: none;
+}
+.subItem:hover{
+    background-color: #ffffff !important;
+}

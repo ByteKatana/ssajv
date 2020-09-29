@@ -1,0 +1,23 @@
+.horizontalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+tr{
+    cursor: pointer;
+}
+td{
+    position:relative;
+}
+.step_table{
+    padding-left: 100px;
+}
+
+.subItem{
+    cursor: initial;
+    transition: none;
+}
+.subItem:hover{
+    background-color: #ffffff !important;
+}
+
