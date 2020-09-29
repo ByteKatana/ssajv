@@ -4,7 +4,7 @@ a REST API and UI for SQL Server Agent Jobs with Express and React
 ## Installation
 
 ### 1. API Server Installation
-  1. Change directory to webapi folder and install packages with "npm install" command.
+  1. Change directory to webapi folder and install packages with `npm install` command.
   2. Change name of `.env.example` file to ` .env ` and edit .env file to set api server port, database and web ui information.
   3. Start server with "npm start" (for development mode "npm run dev").
   4. If everything is correct, on console, you will get messages as follows:
