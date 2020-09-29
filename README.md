@@ -17,7 +17,7 @@ a REST API and UI for SQL Server Agent Jobs with Express and React
 ### 2. WebUI Installation
   1. Change directory to webui folder and install packages with `npm install` or `yarn install` command.
   2. By default logo is react's own logo, if you want to change it, you replace `logo192.png` file in /webui/public directory.
-  3. By default, port is 3001, if you want change this, in Windows `SET PORT=[PORT_NUMBER]` and in linux "export `PORT=[PORT_NUMBER]` command will change port number.  But if you change the port, you have build the application again for production mode with "npm build" or "yarn build" command.
+  3. By default, port is 3001, if you want change this, in Windows `SET PORT=[PORT_NUMBER]` and in linux "export `PORT=[PORT_NUMBER]` command will change port number.  But if you change the port, you have build the application again for production mode with `npm build` or `yarn build` command.
   4. Start server with `serve -s build` (or for development mode `npm start` or `yarn start`) command
   
   ## API Server Routes
