@@ -1,8 +1,6 @@
-.step_item{
-    background-color: rgb(247, 247, 247) !important;
-    border-color: rgb(0, 0, 0) !important;
-    color: rgb(44, 44, 44) !important;
-    cursor: initial;
-
+.step_item {
+  background-color: rgb(247, 247, 247) !important;
+  border-color: rgb(0, 0, 0) !important;
+  color: rgb(44, 44, 44) !important;
+  cursor: initial;
 }
-

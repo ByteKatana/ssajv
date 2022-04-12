@@ -8,7 +8,7 @@ const {dbPool1Connect} = require('../database/dbConnection');
         if(result.rowsAffected == 0) return {}
         return result
     } catch (error) {
-        console.log(error)
+        console.log(`ERROR!!!: ${error}`)
     }
 }
 

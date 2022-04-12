@@ -1,23 +1,26 @@
 .horizontalCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-tr{
-    cursor: pointer;
+tr {
+  cursor: pointer;
 }
-td{
-    position:relative;
+td {
+  position: relative;
 }
-.step_table{
-    padding-left: 100px;
-}
-
-.subItem{
-    cursor: initial;
-    transition: none;
-}
-.subItem:hover{
-    background-color: #ffffff !important;
+.step_table {
+  padding-left: 100px;
 }
 
+.subItem {
+  cursor: initial;
+  transition: none;
+  background-color: #ffffff !important;
+}
+
+td > div:hover,
+.subItem:hover
+{
+  background-color: #ffffff !important;
+}

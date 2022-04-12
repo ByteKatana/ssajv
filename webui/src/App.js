@@ -1,47 +1,33 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from "react"
+import { BrowserRouter as Router, Routes, Route /*Link*/ } from "react-router-dom"
 
-
-import { AppNavbar } from './components/navbar/navbar.component'
+import { AppNavbar } from "./components/navbar/navbar.component"
 
 //Pages
-import Homepage from './pages/Homepage'
-import Statistics from './pages/Statistics'
+import Homepage from "./pages/Homepage"
+import Statistics from "./pages/Statistics"
 
 // ================================================ //
 
-class App extends  React.Component {
-
+class App extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {}
-
   }
 
-
-  render(){
+  render() {
     return (
-<>
-<AppNavbar />
-      <Router>
-          <Switch>
-            <Route exact path="/">
-              <Homepage />
-            </Route>
-            <Route exact path="/statistics">
-              <Statistics />
-            </Route>
-        </Switch>
-      </Router>
-</>
+      <>
+        <AppNavbar />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/statistics" element={<Statistics />} />
+          </Routes>
+        </Router>
+      </>
     )
   }
 }
 
-
-export default App;
+export default App

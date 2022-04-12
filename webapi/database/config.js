@@ -11,7 +11,8 @@ const config = {
     options:{
         enableArithAbort: false
     },
-    requestTimeout: 50000
+    requestTimeout: 50000,
+    trustServerCertificate: true
 }
 
 module.exports = {config}
