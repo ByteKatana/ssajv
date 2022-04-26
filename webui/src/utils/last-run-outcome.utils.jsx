@@ -103,7 +103,7 @@ export const LastRunOutCome = (props) => {
         return <FiInfo color={"#6f42c1"} size={"24px"} />
       }
     } else {
-      if (typeof props.filterVal != undefined) {
+      if (props.filterVal !== undefined) {
         if (props.outcome == 0) {
           return (
             <FiXOctagon

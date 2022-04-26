@@ -94,8 +94,8 @@ export const ListItem = (props) => {
             <FiX color={"#d73a49"} size={"24px"} />
           )}
         </td>
-        <td>{props.job.name}</td>
-        <td>
+        <td data-testid={"test-job-name"}>{props.job.name}</td>
+        <td data-testid={`outcome-${props.job.servers[0].last_run_outcome}`}>
           <OverlayTrigger
             placement="right"
             delay={{ show: 250, hide: 400 }}

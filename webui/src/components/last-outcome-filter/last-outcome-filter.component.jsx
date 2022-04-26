@@ -32,7 +32,7 @@ export const LastOutcomeFilter = (props) => {
   return (
     <>
       <b>Last Outcome Filter: </b>
-      <ButtonGroup>
+      <ButtonGroup data-testid="last-outcome-btns">
         {filters.map((filter, key) => (
           <ToggleButton
             key={key}

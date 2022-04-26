@@ -46,6 +46,7 @@ function ServerList(props) {
                 </Tooltip>
               }>
               <Button
+                data-testid="server_all_jobs_btn"
                 className="mt-1"
                 variant="primary"
                 size="sm"
@@ -97,6 +98,7 @@ function ServerList(props) {
             </small>
           </div>
           <Button
+            data-testid="server_jobs_btn"
             className="mt-1"
             variant="primary"
             size="sm"
