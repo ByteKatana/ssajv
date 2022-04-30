@@ -5,9 +5,9 @@
   "main": "app.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --forceExit",
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "keywords": [
     "sqlserver",
@@ -27,5 +27,9 @@
     "mssql": "^8.0.2",
     "nodemon": "^2.0.15",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3",
+    "supertest": "^6.2.3"
   }
 }
