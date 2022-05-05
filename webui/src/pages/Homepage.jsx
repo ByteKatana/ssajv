@@ -20,6 +20,9 @@ import listPlugin from "@fullcalendar/list"
 //HOC - Loading
 import { WithLoading } from "../components/with-loading/with-loading.component"
 
+//ENV
+const env = process.env
+
 //Sending Components to HOC
 const ListWithLoading = WithLoading(List)
 const CalendarWithLoading = WithLoading(FullCalendar)
@@ -47,7 +50,9 @@ class HomePage extends React.Component {
     if (this.state.loading === false) {
       this.setState({ loading: true })
     }
-    return fetch("http://localhost:3000/api/jobs/details")
+    return fetch(
+      `${env.REACT_APP_API_PROTOCOL}://${env.REACT_APP_API_URI}:${env.REACT_APP_API_PORT}/api/jobs/details`
+    )
       .then((response) => response.json())
       .then((jobs) => {
         console.log(jobs)
@@ -57,7 +62,10 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     //Getting Schedule data from API Server
-    fetch("http://localhost:3000/api/schedules/details")
+
+    fetch(
+      `${env.REACT_APP_API_PROTOCOL}://${env.REACT_APP_API_URI}:${env.REACT_APP_API_PORT}/api/schedules/details`
+    )
       .then((response) => response.json())
       .then((sj) => {
         let calendarDts = sj.map((dt) => ({
@@ -73,7 +81,10 @@ class HomePage extends React.Component {
     this.getAllJobs()
 
     //Getting Servers from API Server
-    fetch("http://localhost:3000/api/servers")
+
+    fetch(
+      `${env.REACT_APP_API_PROTOCOL}://${env.REACT_APP_API_URI}:${env.REACT_APP_API_PORT}/api/servers`
+    )
       .then((response) => response.json())
       .then((servers) => {
         return this.setState({ serverListLoading: false, servers: servers })
@@ -91,7 +102,6 @@ class HomePage extends React.Component {
       serverListLoading,
       LastOutcomeField
     } = this.state
-
     //Filtering jobs when user type in the search box
     var filteredJobs = jobs
       .filter((job) => job.name.toLowerCase().includes(searchField.toLocaleLowerCase()))
@@ -102,7 +112,10 @@ class HomePage extends React.Component {
       if (this.state.loading === false) {
         this.setState({ loading: true })
       }
-      fetch(`http://localhost:3000/api/server/${id}/details`)
+
+      fetch(
+        `${env.REACT_APP_API_PROTOCOL}://${env.REACT_APP_API_URI}:${env.REACT_APP_API_PORT}/api/server/${id}/details`
+      )
         .then((response) => response.json())
         .then((details) => {
           details[0].jobs.forEach((job) => {

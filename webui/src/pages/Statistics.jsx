@@ -17,6 +17,8 @@ import { ResponsiveBar } from "@nivo/bar"
 
 //HOC - Loading
 import { WithLoading } from "../components/with-loading/with-loading.component"
+//ENV
+const env = process.env
 
 //Components
 
@@ -39,7 +41,9 @@ class Statistics extends React.Component {
     this.setState({ loading: true })
 
     //Getting Jobs from API Server
-    fetch("http://localhost:3000/api/jobs/details")
+    fetch(
+      `${env.REACT_APP_API_PROTOCOL}://${env.REACT_APP_API_URI}:${env.REACT_APP_API_PORT}/api/jobs/details`
+    )
       .then((response) => response.json())
       .then((jobs) => {
         return this.setState({ loading: false, jobs: jobs })

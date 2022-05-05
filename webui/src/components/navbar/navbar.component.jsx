@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav"
 import Image from "react-bootstrap/Image"
 
 // ================================================ //
-export const AppNavbar = (props) => {
+export const AppNavbar = () => {
   return (
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="/">
